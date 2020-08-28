@@ -1,3 +1,187 @@
+/*# Start Reset #*/
+
+/*
+http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+/*# Fin Reset #*/
+
+/* General */
+:root {
+  --primary-gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+  --pale-Blue: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --dark-blue: hsl(228, 56%, 26%);
+  --very-dark-blue: hsl(229, 57%, 11%);
+  --font-size: 14px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  /* #1E2C69 */
+}
+
+/* Global */
+main {
+  min-height: 100vh;
+  background: var(--very-dark-blue);
+  background: no-repeat url("./images/bg-mobile.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+article {
+  background: var(--dark-blue);
+  width: 65vw;
+  border-radius: 0.5em;
+  padding: 2em;
+}
+
+/* First article */
+
+article:first-child {
+  margin-bottom: 1em;
+  border-top-right-radius: 4em;
+}
+
+article:first-child div {
+  display: flex;
+  margin-top: 1.5em;
+}
+
+article:first-child button {
+  background-color: var(--very-dark-blue);
+  border: none;
+  margin-right: 1.25em;
+  height: 4em;
+  width: 4em;
+  border-radius: 0.75em;
+}
+
+/* Last article */
+
+article:last-child {
+  position: relative;
+}
+
+article:last-child #size-available {
+  position: absolute;
+  bottom: 0;
+}
+
 footer {
   font-size: 11px;
   text-align: center;
