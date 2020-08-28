@@ -6,6 +6,7 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
     <title>Frontend Mentor | Fylo data storage component</title>
   </head>
   <body>
@@ -28,9 +29,12 @@
         </div>
 
         <!-- Size storage indicator -->
-        <div>
-          <p>You’ve used <span class="size-used">815 GB</span> of your storage</p>
-          <progress max="1000" value="815" aria-valuemax="1000 GB" aria-valuenow="815 GB"></progress>
+        <div id="size-indicator">
+          <p>You’ve used <span id="size-used">815 GB</span> of your storage</p>
+          <!-- TODO: add aria -->
+          <div max="1000" value="815" aria-valuemax="1000 GB" aria-valuenow="815 GB" id="progress-bar">
+            <div id="progress"><span id="indicator"></span></div>
+          </div>
           <div aria-hidden="true" id="progress-min-max">
             <span aria-hidden="true">0 GB</span>
             <span aria-hidden="true">1000 GB</span>

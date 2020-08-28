@@ -119,16 +119,14 @@ ul {
 
 /* General */
 :root {
-  --primary-gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
-  --pale-Blue: hsl(243, 100%, 93%);
+  --primary-gradient: hsl(6, 100%, 80%) 0%, hsl(335, 100%, 65%) 100%;
+  --pale-blue: hsl(243, 100%, 93%);
   --grayish-blue: hsl(229, 7%, 55%);
   --dark-blue: hsl(228, 56%, 26%);
   --very-dark-blue: hsl(229, 57%, 11%);
   --font-size: 14px;
-  --font-weight-normal: 400;
+  --font-weight-regular: 400;
   --font-weight-bold: 700;
-
-  /* #1E2C69 */
 }
 
 /* Global */
@@ -141,6 +139,10 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: "Raleway", sans-serif;
+  color: var(--pale-blue);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight-regular);
 }
 
 article {
@@ -148,6 +150,14 @@ article {
   width: 65vw;
   border-radius: 0.5em;
   padding: 2em;
+}
+
+footer {
+  font-size: 11px;
+  text-align: center;
+}
+footer a {
+  color: hsl(228, 45%, 44%);
 }
 
 /* First article */
@@ -182,10 +192,35 @@ article:last-child #size-available {
   bottom: 0;
 }
 
-footer {
-  font-size: 11px;
-  text-align: center;
+article:last-child #size-indicator p {
+  margin-bottom: 1em;
 }
-footer a {
-  color: hsl(228, 45%, 44%);
+
+/* kill style native */
+#progress-bar {
+  width: 100%;
+  height: 1.25em;
+  border: 0.25em #14204a solid;
+  border-radius: 1em;
+  background-color: #14204a;
+  position: relative;
+}
+
+#progress {
+  width: 81.5%;
+  position: relative;
+  border-radius: 1em;
+  background: hsl(6, 100%, 80%);
+  background: -moz-linear-gradient(146deg, var(--primary-gradient));
+  background: -webkit-linear-gradient(146deg, var(--primary-gradient));
+  background: linear-gradient(146deg, var(--primary-gradient));
+}
+
+#indicator {
+  position: absolute;
+  content: "";
+  border-radius: 1em;
+  width: 1em;
+  height: 1em;
+  background: white;
 }
