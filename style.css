@@ -144,13 +144,13 @@ main {
   color: var(--pale-blue);
   font-size: var(--font-size);
   font-weight: var(--font-weight-regular);
+  padding: 0 7vw;
 }
 
 article {
   background: var(--dark-blue);
-  width: 65vw;
   border-radius: 0.5em;
-  padding: 2em;
+  width: -webkit-fill-available;
 }
 
 footer {
@@ -164,22 +164,31 @@ footer a {
 /* First article */
 
 article:first-child {
+  padding: 2.75em;
   margin-bottom: 1em;
-  border-top-right-radius: 4em;
+  border-top-right-radius: 6.5em;
+  /* TODO: add negative margin-top because absolute position of last element */
 }
 
 article:first-child div {
   display: flex;
-  margin-top: 1.5em;
+  margin-top: 2em;
 }
 
 article:first-child button {
   background-color: var(--very-dark-blue);
   border: none;
-  margin-right: 1.25em;
-  height: 4em;
-  width: 4em;
+  height: 4.5em;
+  width: 4.5em;
   border-radius: 0.75em;
+}
+
+article:first-child button:not(:last-child) {
+  margin-right: 1.5em;
+}
+
+article:first-child button img {
+  vertical-align: middle;
 }
 
 /* Last article */
