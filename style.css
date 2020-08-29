@@ -283,3 +283,65 @@ article:last-child #size-indicator #progress-min-max {
   font-weight: var(--font-weight-bold);
   font-size: 0.85em;
 }
+
+/* Media queries */
+
+@media only screen and (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 1) {
+  /* General */
+  main {
+    background: no-repeat url('./images/bg-desktop.png') var(--very-dark-blue) bottom right;
+    background-size: 100vw;
+    flex-direction: row;
+  }
+
+  article {
+    width: auto;
+  }
+
+  /* First article */
+
+  article:first-child {
+    padding: 2.75em;
+    padding-right: 10em;
+    margin: 0;
+    margin-right: 2em;
+  }
+
+  /* Last article */
+
+  article:last-child {
+    width: 32.5vw;
+    padding: 2.25em;
+    padding-top: 3em;
+    margin-top: 4em;
+  }
+
+  /* Bubble */
+
+  article:last-child #size-available {
+    bottom: initial;
+    left: initial;
+    right: 6.5%;
+    top: -30%;
+    transform: none;
+  }
+
+  /* TODO: triangle bubble */
+
+  /* Sentence */
+
+  article:last-child #size-indicator p {
+    text-align: left;
+  }
+}
+
+/* 
+
+article:last-child #size-indicator p {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+article:last-child #size-indicator p #size-used {
+  font-weight: var(--font-weight-bold);
+} */
