@@ -25,14 +25,13 @@
       <article>
         <!-- Bubble -->
         <div id="size-available">
-          <p>185 GB Left</p>
+          <p><span id="size">185</span> <span id="unit-measure">GB Left</span></p>
         </div>
 
         <!-- Size storage indicator -->
         <div id="size-indicator">
           <p>You’ve used <span id="size-used">815 GB</span> of your storage</p>
-          <!-- TODO: add aria -->
-          <div max="1000" value="815" aria-valuemax="1000 GB" aria-valuenow="815 GB" id="progress-bar">
+          <div role="progressbar" max="1000" value="815" aria-valuemax="1000 GB" aria-valuenow="815 GB" id="progress-bar">
             <div id="progress"><span id="indicator"></span></div>
           </div>
           <div aria-hidden="true" id="progress-min-max">
