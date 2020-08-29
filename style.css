@@ -127,7 +127,6 @@ ul {
   --font-size: 14px;
   --font-weight-regular: 400;
   --font-weight-bold: 700;
-  --progress-size: 1.25em;
 }
 
 /* Global */
@@ -166,8 +165,8 @@ footer a {
 article:first-child {
   padding: 2.75em;
   margin-bottom: 1em;
+  margin-top: -3.5em;
   border-top-right-radius: 6.5em;
-  /* TODO: add negative margin-top because absolute position of last element */
 }
 
 article:first-child div {
@@ -195,7 +194,8 @@ article:first-child button img {
 
 article:last-child {
   position: relative;
-  padding-bottom: 5em;
+  padding: 2.25em;
+  padding-bottom: 4em;
 }
 
 /* Bubble */
@@ -205,14 +205,16 @@ article:last-child #size-available {
   background: white;
   border-radius: 0.75em;
   color: var(--very-dark-blue);
-  bottom: -43%;
+  bottom: -46%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: -webkit-fit-content;
 }
 
 article:last-child #size-available p {
-  margin: 1em 2em;
+  margin: 1.1em 1.8em;
+  display: flex;
+  align-items: center;
 }
 
 article:last-child #size-available #size {
@@ -225,11 +227,14 @@ article:last-child #size-available #unit-measure {
   text-transform: uppercase;
   font-weight: var(--font-weight-bold);
   color: var(--grayish-blue);
+  font-size: 0.85em;
+  margin-left: 0.75em;
 }
 
-/* Progress bar */
+/* Sentence */
 
 article:last-child #size-indicator p {
+  text-align: center;
   margin-bottom: 1em;
 }
 
@@ -237,9 +242,11 @@ article:last-child #size-indicator p #size-used {
   font-weight: var(--font-weight-bold);
 }
 
+/* Progress bar */
+
 article:last-child #size-indicator #progress-bar {
   width: 100%;
-  height: var(--progress-size);
+  height: 1.3em;
   border: 0.25em #14204a solid;
   border-radius: 1em;
   background-color: #14204a;
@@ -249,7 +256,7 @@ article:last-child #size-indicator #progress-bar {
 
 article:last-child #size-indicator #progress {
   width: 81.5%;
-  height: calc(var(--progress-size) - 6px);
+  height: 0.8em;
   position: relative;
   border-radius: 1em;
   background: hsl(6, 100%, 80%);
@@ -261,15 +268,18 @@ article:last-child #size-indicator #progress {
 article:last-child #size-indicator #indicator {
   position: absolute;
   border-radius: 1em;
-  width: calc(var(--progress-size) - 9px);
-  height: calc(var(--progress-size) - 9px);
+  width: calc(1.3em - 9px);
+  height: calc(1.3em - 9px);
   background: white;
   top: 1px;
   right: 1px;
 }
 
 article:last-child #size-indicator #progress-min-max {
+  margin-top: 0.75em;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  font-weight: var(--font-weight-bold);
+  font-size: 0.85em;
 }
